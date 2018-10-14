@@ -17,7 +17,6 @@ class ResourceViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var videoTitleLabel: UILabel!
     @IBOutlet weak var commentsLabel: UILabel!
     @IBOutlet weak var replyButton: UIButton!
-    @IBOutlet weak var relatedVideosLabel: UILabel!
     @IBOutlet weak var commentTableView: UITableView!
     @IBOutlet weak var backButton: UIButton!
     
@@ -37,7 +36,6 @@ class ResourceViewController: UIViewController, UITableViewDataSource, UITableVi
         replyButton.setTitle(LanguageManager.getTranslation(wordsToTranslate: "Reply"), for: .normal)
         videoTitleLabel.text = LanguageManager.getTranslation(wordsToTranslate: videoTitle)
         commentsLabel.text = LanguageManager.getTranslation(wordsToTranslate: "Comments")
-        relatedVideosLabel.text = LanguageManager.getTranslation(wordsToTranslate: "Related Videos")
         backButton.setTitle(LanguageManager.getTranslation(wordsToTranslate: "Back"), for: .normal)
     }
     

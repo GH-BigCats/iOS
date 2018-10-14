@@ -32,6 +32,10 @@ class MainViewController: UIViewController {
         askMeLabel.text = LanguageManager.getTranslation(wordsToTranslate: "Ask Me A Question")
     }
     
+    @IBAction func backToLanding(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -29,7 +29,7 @@ class LanguageManager {
     static func getTranslation(wordsToTranslate: String) -> String {
         let translation = wordsToTranslate.replacingOccurrences(of: " ", with: "+")
         do {
-            let url = URL(string: "https://a9cdae87.ngrok.io?string=\(translation)&language=\(LanguageManager.language)")
+            let url = URL(string: "http://pathforward.s3-website.us-east-2.amazonaws.com/string=\(translation)&language=\(LanguageManager.language)")
             let data = try Data(contentsOf: url!)
             let string = String(data: data, encoding: String.Encoding.utf8)
             return string!

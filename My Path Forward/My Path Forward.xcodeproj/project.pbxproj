@@ -124,6 +124,7 @@
 				D771F21221729DF4008A9FF1 /* MainViewController.swift */,
 				D771F2162172A437008A9FF1 /* ResourceViewController.swift */,
 				D771F2182172B225008A9FF1 /* QuestionListViewController.swift */,
+				D727CF4821732BB40081A47F /* QuestionDetailViewController.swift */,
 				D771F2242172D5BB008A9FF1 /* LanguageManager.swift */,
 				D771F1E8217299C6008A9FF1 /* Main.storyboard */,
 				D771F1EB217299C7008A9FF1 /* Assets.xcassets */,
@@ -134,7 +135,6 @@
 				D771F22C2172F1A6008A9FF1 /* CommentTableViewCell.swift */,
 				D771F22E21730CC5008A9FF1 /* Question.swift */,
 				D727CF46217327820081A47F /* UnansweredQuestionTableViewCell.swift */,
-				D727CF4821732BB40081A47F /* QuestionDetailViewController.swift */,
 				D727CF4A21732C510081A47F /* Comment.swift */,
 			);
 			path = "My Path Forward";
@@ -479,6 +479,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W5M5K2W3PT;
 				INFOPLIST_FILE = "My Path Forward/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -496,6 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W5M5K2W3PT;
 				INFOPLIST_FILE = "My Path Forward/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

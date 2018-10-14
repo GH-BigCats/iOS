@@ -13,4 +13,11 @@ struct Comment {
     var name: String
     var timeOfPost: String
     var comment: String
+    
+    init(upvoteCount: Int, name: String, timeOfPost: String, comment: String) {
+        self.upvoteCount = upvoteCount
+        self.name = name
+        self.timeOfPost = timeOfPost
+        self.comment = comment
+    }
 }

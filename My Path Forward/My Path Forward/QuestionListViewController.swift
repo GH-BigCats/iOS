@@ -40,8 +40,8 @@ class QuestionListViewController: UIViewController, UITableViewDataSource, UITab
         questionsLabel.text = LanguageManager.getTranslation(wordsToTranslate: "Questions")
         sortedByLabel.text = LanguageManager.getTranslation(wordsToTranslate: "Sorted By")
         
-        let q1 = Question(title: "How do I fill out a W2?", numVotes: 3, numAnswers: 1, daysSincePosted: "Posted 2 days ago", tags: "St. Louis, Finance, Government")
-        let q2 = Question(title: "Where can I go to find cultural festivals", numVotes: 7, numAnswers: 3, daysSincePosted: "Posted 1 day ago", tags: "St. Louis, Festivals")
+        let q1 = Question(title: "How do I fill out a W2?", numVotes: 3, numAnswers: 0, daysSincePosted: "Posted 2 days ago", tags: "St. Louis, Finance, Government")
+        let q2 = Question(title: "Where can I go to find cultural festivals", numVotes: 7, numAnswers: 0, daysSincePosted: "Posted 1 day ago", tags: "St. Louis, Festivals")
         questions.append(q1)
         questions.append(q2)
     }
