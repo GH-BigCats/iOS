@@ -1,5 +1,5 @@
 //
-//  PathTableViewCell.swift
+//  QuestionTableViewCell.swift
 //  My Path Forward
 //
 //  Created by Petshack Dev on 10/13/18.
@@ -8,10 +8,14 @@
 
 import UIKit
 
-class PathTableViewCell: UITableViewCell {
+class QuestionTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var upvoteCountLabel: UILabel!
+    @IBOutlet weak var answersCountLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var postedDaysAgoLabel: UILabel!
+    @IBOutlet weak var tagsLabel: UILabel!
+    @IBOutlet weak var tagsHeaderLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,4 +28,6 @@ class PathTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    
+    
 }

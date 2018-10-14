@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "Question"; ObjectID = "BDt-Gh-zph"; */
+"BDt-Gh-zph.text" = "Question";
+
+/* Class = "UILabel"; text = "Comments"; ObjectID = "BS9-2P-nQW"; */
+"BS9-2P-nQW.text" = "Comments";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "GkU-kb-blW"; */
+"GkU-kb-blW.text" = "0";
+
+/* Class = "UILabel"; text = "My Path Forward"; ObjectID = "N1d-rX-Zhc"; */
+"N1d-rX-Zhc.text" = "My Path Forward";
+
+/* Class = "UITextField"; placeholder = "e.g., Espanol"; ObjectID = "OgH-Sc-WCH"; */
+"OgH-Sc-WCH.placeholder" = "e.g., Espanol";
+
+/* Class = "UILabel"; text = "Language"; ObjectID = "Pwb-Pg-vvW"; */
+"Pwb-Pg-vvW.text" = "Language";
+
+/* Class = "UINavigationItem"; title = "Search"; ObjectID = "Rzw-P3-UbH"; */
+"Rzw-P3-UbH.title" = "Search";
+
+/* Class = "UITextField"; placeholder = "Search..."; ObjectID = "SH0-VF-Kul"; */
+"SH0-VF-Kul.placeholder" = "Search...";
+
+/* Class = "UIButton"; normalTitle = "Reply"; ObjectID = "UTi-ZC-Z02"; */
+"UTi-ZC-Z02.normalTitle" = "Reply";
+
+/* Class = "UIButton"; normalTitle = "See what people need answered"; ObjectID = "VC3-U2-L4F"; */
+"VC3-U2-L4F.normalTitle" = "See what people need answered";
+
+/* Class = "UILabel"; text = "Related Videos"; ObjectID = "VWz-qs-GeH"; */
+"VWz-qs-GeH.text" = "Related Videos";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "Vb3-P0-r3q"; */
+"Vb3-P0-r3q.normalTitle" = "Confirm";
+
+/* Class = "UILabel"; text = "Video Title"; ObjectID = "Wfi-9U-2Ig"; */
+"Wfi-9U-2Ig.text" = "Video Title";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "cY8-qU-kec"; */
+"cY8-qU-kec.text" = "1";
+
+/* Class = "UILabel"; text = "Questions"; ObjectID = "cb5-MO-1ER"; */
+"cb5-MO-1ER.text" = "Questions";
+
+/* Class = "UIButton"; normalTitle = "Go!"; ObjectID = "gE3-La-VBk"; */
+"gE3-La-VBk.normalTitle" = "Go!";

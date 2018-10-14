@@ -8,99 +8,38 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+
+    @IBOutlet weak var languagePicker: UIPickerView!
     
-    @IBOutlet weak var navigationControl: UISegmentedControl!
-    
-    @IBOutlet weak var pathTableView: UITableView!
-    var paths = [Path]()
-    var pathsInProgress = [Path]()
-    var pathsDone = [Path]()
+    var languages = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        do {
-            let pathJSON = """
-            {
-                "title": "Example Path",
-                "description": "Example Path Description",
-                "steps": [
-                    {
-                        "title": "Example Step 1",
-                        "description": "Example Step Description 1",
-                        "pointsOfContact": [
-                            {
-                                "name": "Example Contact",
-                                "phoneNumber": "333-333-3333",
-                                "whatsApp": "Example WA Link"
-                            }
-                        ]
-                    }
-                ],
-                "done": true
+        for code in Locale.isoLanguageCodes {
+            if let language = Locale(identifier: "en_us").localizedString(forLanguageCode: code) {
+                languages.append(language)
             }
-            """
-            let pathJSON2 = """
-            {
-                "title": "Example Path 2",
-                "description": "Example Path 2 Description",
-                "steps": [
-                    {
-                        "title": "Example Step 1",
-                        "description": "Example Step Description 1",
-                        "pointsOfContact": [
-                            {
-                                "name": "Example Contact",
-                                "phoneNumber": "333-333-3333",
-                                "whatsApp": "Example WA Link"
-                            }
-                        ]
-                    }
-                ],
-                "done": false
-            }
-            """
-            
-            let data = pathJSON.data(using: .utf8)
-            let pathValue = try JSONDecoder().decode(Path.self, from: data!)
-            let data2 = pathJSON2.data(using: .utf8)
-            let pathValue2 = try JSONDecoder().decode(Path.self, from: data2!)
-            
-            paths = [pathValue, pathValue2]
-            
-            pathsInProgress = paths.filter({ $0.done! })
-            pathsDone = paths.filter({ !$0.done! })
-        } catch {
-            print(error)
         }
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        var count = 0
-        if navigationControl.selectedSegmentIndex == 0 {
-            count = pathsInProgress.count
-        } else {
-            count = pathsDone.count
-        }
-        return count
+        languages = languages.sorted()
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = pathTableView.dequeueReusableCell(withIdentifier: "pathCell") as? PathTableViewCell else {
-            return UITableViewCell.init()
-        }
-        
-        let viewablePaths = navigationControl.selectedSegmentIndex == 0 ? pathsInProgress : pathsDone
-        
-        cell.titleLabel.text = viewablePaths[indexPath.row].title
-        cell.descriptionLabel.text = viewablePaths[indexPath.row].description
-        
-        return cell
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
     
-    @IBAction func changeViewablePaths(_ sender: Any) {
-        pathTableView.reloadData()
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return languages.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return languages[row]
+    }
+    
+    @IBAction func confirmLanguage(_ sender: Any) {
+        let language = languages[languagePicker.selectedRow(inComponent: 0)]
+        LanguageManager.setLanguage(language: language)
     }
 }
 
